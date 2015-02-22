@@ -25,9 +25,9 @@ Among many files in the zip file downloaded for this project, only 8 text files 
 * train/y_train.txt
 
 The variables used in the script are:
-* X_train, y_train, X_test, y_test, subject_train and subject_test represent the data from those downloaded files
-* X_data, y_data and subject_data represent the merged data set from the above 6 datasets for further analysis
-* Features contains the correct names for the x_data dataset, which are applied to the column names stored in mean_and_std_features, a numeric vector used to extract the desired data.
-A similar approach is taken with activity names through the activities variable.
-all_data merges x_data, y_data and subject_data in a big dataset.
-Finally, averages_data contains the relevant averages which will be later stored in a .txt file. ddply() from the plyr package is used to apply colMeans() and ease the development.
+* X_train, y_train, X_test, y_test, subject_train and subject_test are the data from those downloaded files
+* X_data, y_data and subject_data are the merged data set from the above 6 datasets for further analysis
+* Features has the names for the X_data dataset
+* all_data is the data set after merging columns to have all training and test data sets together 
+* ActivityLabel has the names for the activity
+* averages_data contains the average of each variable for each activity and each subject. this file is written as txt file in the working directory (named as tidydata.txt)
