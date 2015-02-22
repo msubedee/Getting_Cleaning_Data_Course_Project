@@ -16,10 +16,18 @@ The R script "run_analysis.R" basically consists of 6 sections.
   *  This section uses ddply function to split data frame 'all_data', apply function 'colMeans', and return results in data frame 'avearge_data', and finally exports the tidydata set.
 
 ### <h3> Variables
+Among many files in the zip file downloaded for this project, only 8 text files are used. Any files in the Inertial Signals folders are not used. The files that are used to load data are:
+* test/subject_test.txt
+* test/X_test.txt
+* test/y_test.txt
+* train/subject_train.txt
+* train/X_train.txt
+* train/y_train.txt
 
-x_train, y_train, x_test, y_test, subject_train and subject_test contain the data from the downloaded files.
-x_data, y_data and subject_data merge the previous datasets to further analysis.
-features contains the correct names for the x_data dataset, which are applied to the column names stored in mean_and_std_features, a numeric vector used to extract the desired data.
+The variables used in the script are:
+* X_train, y_train, X_test, y_test, subject_train and subject_test represent the data from those downloaded files
+* X_data, y_data and subject_data represent the merged data set from the above 6 datasets for further analysis
+* Features contains the correct names for the x_data dataset, which are applied to the column names stored in mean_and_std_features, a numeric vector used to extract the desired data.
 A similar approach is taken with activity names through the activities variable.
 all_data merges x_data, y_data and subject_data in a big dataset.
 Finally, averages_data contains the relevant averages which will be later stored in a .txt file. ddply() from the plyr package is used to apply colMeans() and ease the development.
