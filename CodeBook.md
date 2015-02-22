@@ -8,7 +8,12 @@ The R script "run_analysis.R" basically consists of 6 sections.
   * This section reads the 'test' and 'train' data,  concatenates 'x', 'y' and 'subject' data tables to create new data set, and merges columns to have training and test data sets together as 'all_data'.
 * Section 3: This section extracts only the measurements on the mean and standard deviation for each measurement. 
   * This section sets the name of last two variables in 'all_data', gets only columns with 'mean()' and 'std()' in their names, and defines columns for extracting the subset of 'all_data' based on the the selected columns.
-
+* Section 4: This section uses descriptive activity names to name the activities in the data set.
+  * This section reads the 'activity_labels' data and makes the activity a factor and naming its levels based on the labels in 'ActicityLabel'.
+* Section 5: This section appropriately labels the data set with descriptive variable names.
+  * This section checks the column names and getting all the column names in 'all_data' to 'colNames' vector, cleans up the variable names and reassigns the new column names to the 'all_data' data set.
+* Section 6: This section creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+  *  This section uses ddply function to split data frame 'all_data', apply function 'colMeans', and return results in data frame 'avearge_data', and finally exports the tidydata set.
 ## <h2> tag
 
 
