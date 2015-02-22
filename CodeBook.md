@@ -31,3 +31,4 @@ The variables used in the script are:
 * all_data is the data set after merging columns to have all training and test data sets together 
 * ActivityLabel has the names for the activity
 * averages_data contains the average of each variable for each activity and each subject. this file is written as txt file in the working directory (named as tidydata.txt)
+ 
