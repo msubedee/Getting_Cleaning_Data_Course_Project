@@ -14,8 +14,6 @@ The R script "run_analysis.R" basically consists of 6 sections.
   * This section checks the column names and getting all the column names in 'all_data' to 'colNames' vector, cleans up the variable names and reassigns the new column names to the 'all_data' data set.
 * Section 6: This section creates a second, independent tidy data set with the average of each variable for each activity and each subject.
   *  This section uses ddply function to split data frame 'all_data', apply function 'colMeans', and return results in data frame 'avearge_data', and finally exports the tidydata set.
-## <h2> tag
-
 
 ### <h3> Variables
 
